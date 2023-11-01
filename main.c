@@ -6,7 +6,21 @@ void particao(int *v, int esq, int dir, int *i, int *j) {
   *i = esq;
   *j = dir;
   int pivo, aux;
-  pivo = v[(esq + dir) / 2];
+  /*int mediana;
+  int meio = (esq + dir) / 2;
+  if (v[esq] > v[meio] && v[esq] < v[dir]) {
+    mediana = esq;
+  } else {
+    if (v[meio] > v[dir] && v[meio] < v[dir]) {
+      mediana = meio;
+    } else {
+      mediana = dir;
+    }
+  }// mediana*/
+  // pivo = v[(esq + dir) / 2]; //meio
+  // pivo = mediana; //mediana
+  pivo = dir; // direita
+
   while (*i <= *j) {
     while (v[*i] < pivo && *i < dir) {
       (*i)++;
